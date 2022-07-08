@@ -1,0 +1,52 @@
+.about-us {
+    padding-bottom: 94px;
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
+
+    &-tittle {
+        color: var(--head-color);
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.17;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    &-img {
+        display: flex;
+    }
+
+    &-photo {
+        margin-right: 30px;
+    }
+
+    &-work {
+        position: relative;
+    }
+
+    &-work:after {
+        position: absolute;
+        bottom: 0px;
+        left: 0%;
+        content: "";
+        width: 100%;
+        height: 70px;
+        background: rgba(47, 48, 58, 0.8);
+    }
+
+    &-text {
+        @include font(14px, 700, 1.43em, 0.03em);
+        display: block;
+        position: absolute;
+        bottom: 27px;
+        left: 50%;
+        transform: translate(-50%);
+        height: 16px;
+        text-align: center;
+        color: var(--animation-color);
+        text-transform: uppercase;
+        z-index: 1;
+        white-space: nowrap
+    }
+}

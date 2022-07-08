@@ -1,0 +1,70 @@
+.customers {
+    @media screen and (min-width: 480px) {
+    padding-top: 60px;
+    padding-bottom: 60px;  
+    }
+    @media screen and (min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    }
+    @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    }
+}
+
+.customers__tittle {
+    color: var(--head-color);
+    font-style: normal;
+    @media screen and (min-width: 1200px) {
+        @include font(36px, 700, 1.17em, 0.03em);
+    }
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 33px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 30px;
+    @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    }
+}
+
+.customers__link {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.costumers-item {
+    width: 100%;
+}
+
+.customers__svg {
+    @media screen and (min-width: 480px) {
+    width: 210px;    
+    }
+    @media screen and (min-width: 768px) {
+    width: 226px;    
+    }
+    @media screen and (min-width: 1200px) {
+    width: 170px;    
+    }
+    display: flex;
+    height: 92px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #AFB1B8;
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: var(--p-color);
+    fill: #AFB1B8;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.customers__svg:hover,
+.customers__svg:focus {
+    fill: #188CE8;
+    border-color: var(--button-color);
+}

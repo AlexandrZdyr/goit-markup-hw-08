@@ -1,0 +1,228 @@
+.header {
+    border: 1px solid #ECECEC;
+}
+
+.mail-container {
+    display: flex;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    & {
+        color: var(--button-color);
+        font-family: 'Raleway', sans-serif;
+        @include font(26px, 700, 1.19em, 0.03em);
+        text-decoration: none;
+        margin-right: 93px;
+    }
+
+    &__head {
+        color: #000000;
+    }
+}
+
+.page-link .link {
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+        display: none;
+    }
+    color: var(--head-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14em;
+    text-decoration: none;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.page-link .link:hover,
+.page-link .link:focus {
+    color: var(--button-color);
+}
+
+.page-link .link.current {
+    color: var(--button-color);
+}
+
+.page-link,
+.page-contact {
+    display: flex;
+}
+
+.page-item {
+    margin-right: 50px;
+}
+
+.link {
+    padding: 32px 0;
+    display: block;
+    position: relative;
+
+    &.active-link::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        background-color: var(--button-color);
+        border-radius: 2px;
+        left: 0%;
+        bottom: 0px;
+    }
+}
+
+.headder-left {
+    margin-left: auto;
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+        display: none;
+    }
+    
+}
+
+.page-contact {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 21px;
+    }
+}
+
+.page-contact {
+    &-item:not(:last-child) {
+        @media screen and (min-width: 1200px) {
+        margin-right: 50px;
+        }
+    }
+
+    &-mail {
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+        font-weight: 500;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 0.02em;
+            padding: 0;
+        }
+        color: var(--p-color);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.12em;
+        text-decoration: none;
+        padding: 32px 0;
+        display: flex;
+        align-items: center;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &-mail:hover,
+    .page-contact-mail:focus {
+        color: var(--button-color);
+        fill: var(--button-color);
+    }
+
+    &-svg {
+        margin-right: 10px;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.menu-container {
+    padding-bottom: 48px;
+    padding-left: 40px;
+}
+
+.menu-button {
+    @media screen and (min-width: 768px) {
+            display: none;
+        }
+    display: block;
+    margin-left: auto;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border: none;
+}
+
+.menu-svg {
+    margin-left: -10px;
+}
+
+.menu-close-btn {
+    display: block;
+    margin-left: auto;
+}
+
+.mob-menu {
+    position: fixed;
+    top: 0;
+    left: 0%;
+    z-index: 1;
+    background-color: #ffffff ;
+    width: 100vh;
+    height: 100vh;
+    padding-top: 10px;
+    padding-bottom: 48px;
+}
+
+
+.mob-link {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        display: none;
+    }
+    color: #212121;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: calc(47 / 40);
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-decoration-line: none;
+}
+
+.mob-menu-link {
+    margin-bottom: 32px;
+}
+
+.mob-menu-item:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+.mob-menu-contact-item:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+.mob-menu-contact-tel {
+    font-weight: 500;
+        font-size: 34px;
+        line-height: 40px;
+        letter-spacing: 0.02em;
+        color: #2196F3;
+        text-decoration-line: none;
+}
+
+.pmob-menu-contact-mail {
+    font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: 0.02em;
+        color: #757575;
+        text-decoration-line: none;
+}
+
+.mob-social-link {
+    margin-top: 64px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mob-social-text {
+font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: #2196F3;
+    text-decoration-line: none;
+}

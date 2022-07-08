@@ -1,0 +1,194 @@
+.backdrop {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    position: fixed ;
+    top: 0%;
+    left: 0%;
+    opacity: 1;
+    transition: opacity 300ms, visibility 300ms;
+}
+
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.backdrop .is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.8);
+}
+
+.modal {
+    & {
+        width: 528px;
+        min-height: 581px;
+        background-color: var(--animation-color);
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        padding: 40px;
+    }
+
+    &__close-btn {
+        width: 30px;
+        height: 30px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+        background-color: transparent;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+            fill: var(--button-color);
+        }
+    }
+
+    &__tittle {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.2em;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: #212121;
+        margin-bottom: 12px;
+    }
+
+    &__label {
+        position: relative;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.01em;
+        color: var(--p-color);
+        margin-bottom: 4px;
+    }
+
+    &__input {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 40px;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        margin-bottom: 10px;
+        padding-left: 42px;
+        margin-top: 4px;
+        outline: none;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &::placeholder {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 0.01em;
+            color: rgba(117, 117, 117, 0.5);
+        }
+    }
+
+
+    &__input:focus,
+    &__textarea:focus {
+        border-color: var(--button-color);
+    }
+
+    &__input:focus+&__icon {
+        fill: var(--button-color);
+    }
+
+    &__icon {
+        position: absolute;
+        left: 12px;
+        bottom: 35px
+    }
+
+    &__textarea {
+        width: 100%;
+        height: 96px;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        padding: 12px 16px;
+        resize: none;
+        margin-top: 4px;
+        margin-bottom: 10px;
+        outline: none;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__label-text {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.01em;
+        color: var(--p-color);
+        margin-bottom: 20px;
+    }
+}
+
+.checkbox-icon {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: var(--p-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.checkbox-icon::before {
+    content: "";
+    width: 16px;
+    height: 15px;
+    border: 2px solid #212121;
+    border-radius: 3px;
+    margin-right: 7px;
+}
+
+.checkbox-form-download {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+    color: #2196F3;
+    margin-right: 8px;
+}
+
+.modal__private:checked + .checkbox-icon::before {
+    background-color: var(--button-color);
+    background-image: url(/image/Vector.svg);
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.modal__botton {
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 200px;
+        height: 50px;
+        background: var(--button-color) ;
+        color: var(--animation-color);
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+        border-radius: 4px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.875;
+        border: none;
+        cursor: pointer;
+}
