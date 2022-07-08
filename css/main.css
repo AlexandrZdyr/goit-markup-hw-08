@@ -217,7 +217,7 @@ ul {
 
 .menu-button {
   display: block;
-  margin-left: auto;
+  margin-left: 20px;
   width: 40px;
   height: 40px;
   background-color: #ffffff;
@@ -235,7 +235,11 @@ ul {
 
 .menu-close-btn {
   display: block;
-  margin-left: auto;
+  margin-left: 390px;
+  border: none;
+  background-color: #ffffff;
+  width: 40px;
+  height: 40px;
 }
 
 .mob-menu {
@@ -263,6 +267,11 @@ ul {
   .mob-link {
     display: none;
   }
+}
+
+.mob-link:hover,
+.mob-link:focus {
+  color: var(--button-color);
 }
 
 .mob-menu-link {
@@ -308,6 +317,7 @@ ul {
   letter-spacing: 0.02em;
   color: #2196F3;
   text-decoration-line: none;
+  margin-right: 20px;
 }
 
 .tittle {

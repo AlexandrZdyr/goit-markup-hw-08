@@ -140,7 +140,7 @@
             display: none;
         }
     display: block;
-    margin-left: auto;
+    margin-left: 20px;
     width: 40px;
     height: 40px;
     background-color: #ffffff;
@@ -153,7 +153,11 @@
 
 .menu-close-btn {
     display: block;
-    margin-left: auto;
+    margin-left: 390px;
+    border: none;
+    background-color: #ffffff;
+    width: 40px;
+    height: 40px;
 }
 
 .mob-menu {
@@ -180,6 +184,11 @@
     text-align: center;
     letter-spacing: 0.02em;
     text-decoration-line: none;
+}
+
+.mob-link:hover,
+.mob-link:focus {
+color: var(--button-color);
 }
 
 .mob-menu-link {
@@ -225,4 +234,5 @@ font-weight: 500;
     letter-spacing: 0.02em;
     color: #2196F3;
     text-decoration-line: none;
+    margin-right: 20px;
 }
